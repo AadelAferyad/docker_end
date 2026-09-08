@@ -1,6 +1,6 @@
 FROM debian:bookworm
 
-RUN apt update && apt install -y mariadb-server && rm -rf /var/lib/apt/lists/*
+RUN apt update && apt install -y mariadb-server mariadb-client && rm -rf /var/lib/apt/lists/*
 
 RUN rm -rf /var/lib/mysql/*
 
