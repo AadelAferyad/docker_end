@@ -6,7 +6,7 @@ mkdir -p /run/mysqld
 chown mysql:mysql  /run/mysqld
 
 if [ ! -d /var/lib/mysql/mysql ]; then
-	mariadb-install_db --user=mysql --datadir=/var/lib/mysql
+	mariadb-install-db --user=mysql --datadir=/var/lib/mysql
 	mariadbd --datadir=/var/lib/mysql --user=mysql &
 	until mysqladmin ping > /dev/null 2>&1; do
 		sleep 1
