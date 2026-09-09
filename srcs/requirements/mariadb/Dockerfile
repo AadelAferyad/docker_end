@@ -4,7 +4,7 @@ RUN apt update && apt install -y mariadb-server mariadb-client && rm -rf /var/li
 
 RUN rm -rf /var/lib/mysql/*
 
-COPY ./conf/server.cnf /etc/mysql/mariadb.conf.d/server.cnf
+COPY ./config/server.cnf /etc/mysql/mariadb.conf.d/server.cnf
 
 COPY ./tools/setup.sh /usr/local/bin/
 
